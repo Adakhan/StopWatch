@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="low-poly-iphone-6-wallpaper" translatesAutoresizingMaskIntoConstraints="NO" id="yKO-Vz-GzA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gY2-u3-TLV">
+                                <rect key="frame" x="16" y="620" width="343" height="36"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Countdown">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTd-Jo-NX1">
+                                <rect key="frame" x="8" y="100" width="359" height="105"/>
+                                <color key="backgroundColor" white="1" alpha="0.59594392123287676" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="90"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zz-cn-eJP">
+                                <rect key="frame" x="16" y="315.5" width="100" height="36"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pbw-Od-AKv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Vz-GJ-D7P">
+                                <rect key="frame" x="259" y="315.5" width="100" height="36"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3LZ-6d-MU8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFD-ac-kLK">
+                                <rect key="frame" x="137" y="315.5" width="100" height="36"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Pause">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hdf-Eo-ODN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gY2-u3-TLV" secondAttribute="bottom" constant="11" id="7CP-KR-S97"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gY2-u3-TLV" secondAttribute="trailing" constant="16" id="Ey0-3l-oQH"/>
+                            <constraint firstItem="5zz-cn-eJP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="L6w-Nz-RQS"/>
+                            <constraint firstItem="hTd-Jo-NX1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="Mah-rs-47P"/>
+                            <constraint firstItem="yKO-Vz-GzA" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="O8y-Vc-k0w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hTd-Jo-NX1" secondAttribute="trailing" constant="8" id="OGH-si-3z8"/>
+                            <constraint firstItem="yKO-Vz-GzA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OfY-5k-vUj"/>
+                            <constraint firstItem="yKO-Vz-GzA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RQw-uZ-XjL"/>
+                            <constraint firstItem="yKO-Vz-GzA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SMW-sL-UIa"/>
+                            <constraint firstItem="3Vz-GJ-D7P" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TkN-8h-NiF"/>
+                            <constraint firstItem="hTd-Jo-NX1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="eAI-5Z-iOZ"/>
+                            <constraint firstItem="gY2-u3-TLV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="huw-NP-g5J"/>
+                            <constraint firstItem="pFD-ac-kLK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jLd-5t-d8l"/>
+                            <constraint firstItem="pFD-ac-kLK" firstAttribute="leading" secondItem="5zz-cn-eJP" secondAttribute="trailing" constant="20" id="lU8-fx-fhH"/>
+                            <constraint firstItem="3Vz-GJ-D7P" firstAttribute="leading" secondItem="pFD-ac-kLK" secondAttribute="trailing" constant="20" id="sga-rS-0m0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pauseLabel" destination="pFD-ac-kLK" id="qLC-O9-EGQ"/>
+                        <outlet property="resetLabel" destination="3Vz-GJ-D7P" id="8iL-qa-FtK"/>
+                        <outlet property="startLabel" destination="5zz-cn-eJP" id="yYI-eN-TXi"/>
+                        <outlet property="timeScreen" destination="hTd-Jo-NX1" id="5Vd-HR-amH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="96.7016491754123"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="low-poly-iphone-6-wallpaper" width="750" height="1334"/>
+    </resources>
+</document>
