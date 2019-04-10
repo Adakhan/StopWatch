@@ -23,7 +23,6 @@ class ViewController: UIViewController {
     
     var time = 0
     var timer = Timer()
-    var isTimerRunning = false
     var resumeTapped = false
     
     
@@ -38,13 +37,11 @@ class ViewController: UIViewController {
     //Actions
     
     @IBAction func startButton(_ sender: UIButton) {
-        if isTimerRunning == false {
-            runTimer()
-            pauseLabel.isEnabled = true
-            resetLabel.isEnabled = true
-            startLabel.isEnabled = false
-
-        }
+        
+        runTimer()
+        pauseLabel.isEnabled = true
+        resetLabel.isEnabled = true
+        startLabel.isEnabled = false
         
     }
     
@@ -63,7 +60,6 @@ class ViewController: UIViewController {
     
     @IBAction func resetButton(_ sender: UIButton) {
         timer.invalidate()
-        isTimerRunning = false
         resumeTapped = false
         pauseLabel.isEnabled = false
         startLabel.isEnabled = true
@@ -81,8 +77,6 @@ class ViewController: UIViewController {
         
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.action), userInfo: nil, repeats: true)
         
-        isTimerRunning = true
-        
     }
     
     
@@ -91,6 +85,9 @@ class ViewController: UIViewController {
         time += 1
         timeScreen.text = String(time)
     }
+    
+    
+    
     
 }
 
