@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FACB1D0B225E137F001BC6CB /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB1D0A225E137F001BC6CB /* CountdownViewController.swift */; };
 		FAF24A152254851000D0E5B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF24A142254851000D0E5B2 /* AppDelegate.swift */; };
 		FAF24A172254851000D0E5B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF24A162254851000D0E5B2 /* ViewController.swift */; };
 		FAF24A1A2254851000D0E5B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF24A182254851000D0E5B2 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FACB1D0A225E137F001BC6CB /* CountdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
 		FAF24A112254851000D0E5B2 /* StopWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StopWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF24A142254851000D0E5B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAF24A162254851000D0E5B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				FAF24A142254851000D0E5B2 /* AppDelegate.swift */,
 				FAF24A162254851000D0E5B2 /* ViewController.swift */,
 				FAF24A182254851000D0E5B2 /* Main.storyboard */,
+				FACB1D0A225E137F001BC6CB /* CountdownViewController.swift */,
 				FAF24A1B2254851100D0E5B2 /* Assets.xcassets */,
 				FAF24A1D2254851100D0E5B2 /* LaunchScreen.storyboard */,
 				FAF24A202254851100D0E5B2 /* Info.plist */,
@@ -197,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FACB1D0B225E137F001BC6CB /* CountdownViewController.swift in Sources */,
 				FAF24A172254851000D0E5B2 /* ViewController.swift in Sources */,
 				FAF24A152254851000D0E5B2 /* AppDelegate.swift in Sources */,
 			);
