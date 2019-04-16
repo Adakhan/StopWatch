@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var resetLabel: UIButton!
     
     
+    
+    
     //Proporties
     
     var time = 0
@@ -31,6 +33,10 @@ class ViewController: UIViewController {
         
         pauseLabel.isEnabled = false
         resetLabel.isEnabled = false
+        
+        startLabel.layer.cornerRadius = 5
+        pauseLabel.layer.cornerRadius = 5
+        resetLabel.layer.cornerRadius = 5
     }
     
     

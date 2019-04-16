@@ -18,6 +18,17 @@ class CountdownViewController: UIViewController {
     @IBOutlet weak var stopOutlet: UIButton!
     @IBOutlet weak var backOutlet: UIButton!
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        stopOutlet.isEnabled = false
+        
+        sliderOutlet.layer.cornerRadius = 5
+        startOutlet.layer.cornerRadius = 5
+        stopOutlet.layer.cornerRadius = 5
+        backOutlet.layer.cornerRadius = 5
+    }
+    
     //Proporties
     var seconds = 30
     var timer = Timer()
@@ -68,10 +79,7 @@ class CountdownViewController: UIViewController {
     
     
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        stopOutlet.isEnabled = false
-    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
