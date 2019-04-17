@@ -11,22 +11,26 @@ import UIKit
 class CountdownViewController: UIViewController {
     
     
-    //Otlets
+    //MARK: Outlets
     @IBOutlet weak var timeScreen: UILabel!
     @IBOutlet weak var sliderOutlet: UISlider!
     @IBOutlet weak var startOutlet: UIButton!
     @IBOutlet weak var stopOutlet: UIButton!
     @IBOutlet weak var backOutlet: UIButton!
+    @IBOutlet weak var pauseOutlet: UIButton!
     
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        pauseOutlet.isEnabled = false
         stopOutlet.isEnabled = false
-        
-        sliderOutlet.layer.cornerRadius = 5
-        startOutlet.layer.cornerRadius = 5
-        stopOutlet.layer.cornerRadius = 5
         backOutlet.layer.cornerRadius = 5
+        timeScreen.text = timeString(time: TimeInterval(seconds))
     }
     
     //Proporties
@@ -34,28 +38,38 @@ class CountdownViewController: UIViewController {
     var timer = Timer()
     
     
-    //Buttons
-    
-    @IBAction func slider(_ sender: UISlider) {
+    //MARK: Buttons
+    @IBAction func slider(_ sender: UISlider)
+    {
         seconds = Int(sender.value)
-        timeScreen.text = String(seconds)
+        timeScreen.text = timeString(time: TimeInterval(seconds))
     }
     
     
-    @IBAction func startButton(_ sender: UIButton) {
+    @IBAction func startButton(_ sender: UIButton)
+    {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(CountdownViewController.counter), userInfo: nil, repeats: true)
-        
         
         sliderOutlet.isHidden = true
         startOutlet.isEnabled = false
         stopOutlet.isEnabled = true
+        pauseOutlet.isEnabled = true
     }
     
+    
+    @IBAction func pauseButton(_ sender: UIButton) {
+        stop()
+        sliderOutlet.isHidden = true
+    }
     
     
     @IBAction func stopButton(_ sender: UIButton)
     {
         stop()
+        stopOutlet.isEnabled = false
+        seconds = 30
+        timeScreen.text = timeString(time: TimeInterval(seconds))
+        sliderOutlet.setValue(30, animated: true)
     }
     
     
@@ -65,25 +79,13 @@ class CountdownViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    //MARK: Functions
     func stop()
     {
         timer.invalidate()
-        seconds = 30
-        timeScreen.text = String(seconds)
-        sliderOutlet.setValue(30, animated: true)
-        
-        stopOutlet.isEnabled = false
         sliderOutlet.isHidden = false
+        pauseOutlet.isEnabled = false
         startOutlet.isEnabled = true
-    }
-    
-    
-
-
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
@@ -91,15 +93,24 @@ class CountdownViewController: UIViewController {
     {
         if (seconds == 0)
         {
-            timer.invalidate()
-            sliderOutlet.isHidden = false
-            startOutlet.isEnabled = true
-            stopOutlet.isEnabled = false
+            seconds = 0
+            sliderOutlet.setValue(0, animated: true)
+            
+            stop()
         } else {
             seconds -= 1
         }
-        timeScreen.text = String(seconds)
+        timeScreen.text = timeString(time: TimeInterval(seconds))
         
+    }
+    
+    
+    func timeString(time:TimeInterval) -> String
+    {
+        let hours = Int(time) / 3600
+        let minutes = Int(time) / 60 % 60
+        let seconds = Int(time) % 60
+        return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
     }
   
     

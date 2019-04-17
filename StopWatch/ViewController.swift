@@ -25,7 +25,6 @@ class ViewController: UIViewController {
     
     var time = 0
     var timer = Timer()
-    var resumeTapped = false
     
     
     override func viewDidLoad() {
@@ -33,10 +32,8 @@ class ViewController: UIViewController {
         
         pauseLabel.isEnabled = false
         resetLabel.isEnabled = false
+        timeScreen.text = timeString(time: TimeInterval(time))
         
-        startLabel.layer.cornerRadius = 5
-        pauseLabel.layer.cornerRadius = 5
-        resetLabel.layer.cornerRadius = 5
     }
     
     
@@ -52,27 +49,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func pauseButton(_ sender: UIButton) {
-        if resumeTapped == false {
-            timer.invalidate()
-            resumeTapped = true
-            pauseLabel.setTitle("Resume", for: .normal)
-        } else {
-            runTimer()
-            resumeTapped = false
-            pauseLabel.setTitle("Pause", for: .normal)
-        }
+        
+        stop()
         
     }
     
     @IBAction func resetButton(_ sender: UIButton) {
-        timer.invalidate()
-        resumeTapped = false
-        pauseLabel.isEnabled = false
-        startLabel.isEnabled = true
+        stop()
         resetLabel.isEnabled = false
         time = 0
-        timeScreen.text = String(time)
-        pauseLabel.setTitle("Pause",for: .normal)
+        timeScreen.text = timeString(time: TimeInterval(time))
         
     }
     
@@ -85,11 +71,24 @@ class ViewController: UIViewController {
         
     }
     
+    func stop() {
+        timer.invalidate()
+        startLabel.isEnabled = true
+        pauseLabel.isEnabled = false
+    }
+    
     
     @objc func action() {
         
         time += 1
-        timeScreen.text = String(time)
+        timeScreen.text = timeString(time: TimeInterval(time))
+    }
+    
+    func timeString(time:TimeInterval) -> String {
+        let hours = Int(time) / 3600
+        let minutes = Int(time) / 60 % 60
+        let seconds = Int(time) % 60
+        return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
     }
     
     
