@@ -59,7 +59,6 @@ class CountdownViewController: UIViewController {
     @IBAction func pauseButton(_ sender: UIButton) {
         stop()
         sliderOutlet.setValue(Float(seconds), animated: true)
- 
     }
     
     
@@ -96,9 +95,7 @@ class CountdownViewController: UIViewController {
             seconds -= 1
         }
         timeScreen.text = timeString(time: TimeInterval(seconds))
-        
     }
-    
     
     func timeString(time:TimeInterval) -> String
     {
@@ -107,7 +104,4 @@ class CountdownViewController: UIViewController {
         let seconds = Int(time) % 60
         return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
     }
-  
-    
-
 }
