@@ -58,7 +58,7 @@ class CountdownViewController: UIViewController {
     
     @IBAction func pauseButton(_ sender: UIButton) {
         stop()
-
+        sliderOutlet.setValue(Float(seconds), animated: true)
  
     }
     
