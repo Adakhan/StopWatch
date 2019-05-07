@@ -16,7 +16,6 @@ class CountdownViewController: UIViewController {
     @IBOutlet weak var sliderOutlet: UISlider!
     @IBOutlet weak var startOutlet: UIButton!
     @IBOutlet weak var stopOutlet: UIButton!
-    @IBOutlet weak var backOutlet: UIButton!
     @IBOutlet weak var pauseOutlet: UIButton!
     
     
@@ -29,8 +28,8 @@ class CountdownViewController: UIViewController {
         super.viewDidLoad()
         pauseOutlet.isEnabled = false
         stopOutlet.isEnabled = false
-        backOutlet.layer.cornerRadius = 5
         timeScreen.text = timeString(time: TimeInterval(seconds))
+        sliderOutlet.isContinuous = false
     }
     
     //Proporties
@@ -59,7 +58,8 @@ class CountdownViewController: UIViewController {
     
     @IBAction func pauseButton(_ sender: UIButton) {
         stop()
-        sliderOutlet.isHidden = true
+
+ 
     }
     
     
@@ -73,11 +73,6 @@ class CountdownViewController: UIViewController {
     }
     
     
-    @IBAction func backButoon(_ sender: UIButton)
-    {
-        stop()
-        self.dismiss(animated: true, completion: nil)
-    }
     
     //MARK: Functions
     func stop()
