@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FA0564FA227C4C0F0044A856 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0564F9227C4C0E0044A856 /* Assets.xcassets */; };
+		FA90D67122B61B600005A429 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA90D67022B61B600005A429 /* Extension.swift */; };
 		FACB1D0B225E137F001BC6CB /* CountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB1D0A225E137F001BC6CB /* CountdownViewController.swift */; };
 		FAF24A152254851000D0E5B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF24A142254851000D0E5B2 /* AppDelegate.swift */; };
 		FAF24A172254851000D0E5B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF24A162254851000D0E5B2 /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		FA0564F9227C4C0E0044A856 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA90D67022B61B600005A429 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		FACB1D0A225E137F001BC6CB /* CountdownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownViewController.swift; sourceTree = "<group>"; };
 		FAF24A112254851000D0E5B2 /* StopWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StopWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF24A142254851000D0E5B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA90D66E22B6196B0005A429 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FACB1D0A225E137F001BC6CB /* CountdownViewController.swift */,
+				FAF24A162254851000D0E5B2 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FA90D66F22B61AED0005A429 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FA90D67022B61B600005A429 /* Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		FAF24A082254851000D0E5B2 = {
 			isa = PBXGroup;
 			children = (
@@ -79,10 +98,10 @@
 		FAF24A132254851000D0E5B2 /* StopWatch */ = {
 			isa = PBXGroup;
 			children = (
+				FA90D66F22B61AED0005A429 /* Extension */,
+				FA90D66E22B6196B0005A429 /* Controllers */,
 				FAF24A142254851000D0E5B2 /* AppDelegate.swift */,
-				FAF24A162254851000D0E5B2 /* ViewController.swift */,
 				FAF24A182254851000D0E5B2 /* Main.storyboard */,
-				FACB1D0A225E137F001BC6CB /* CountdownViewController.swift */,
 				FA0564F9227C4C0E0044A856 /* Assets.xcassets */,
 				FAF24A1D2254851100D0E5B2 /* LaunchScreen.storyboard */,
 				FAF24A202254851100D0E5B2 /* Info.plist */,
@@ -203,6 +222,7 @@
 				FACB1D0B225E137F001BC6CB /* CountdownViewController.swift in Sources */,
 				FAF24A172254851000D0E5B2 /* ViewController.swift in Sources */,
 				FAF24A152254851000D0E5B2 /* AppDelegate.swift in Sources */,
+				FA90D67122B61B600005A429 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
