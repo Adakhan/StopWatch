@@ -129,8 +129,9 @@
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="0.0" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="odK-7n-nVZ">
                                 <rect key="frame" x="14" y="289" width="347" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="0.7030179794520548" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="maximumTrackTintColor" red="0.85480856895446777" green="0.85495573282241821" blue="0.85479927062988281" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <connections>
                                     <action selector="slider:" destination="kJE-eH-x1M" eventType="valueChanged" id="e6y-tg-6cK"/>
                                 </connections>
