@@ -14,10 +14,12 @@ class CountdownViewController: UIViewController {
     //MARK: - Outlets
     @IBOutlet weak var timeScreen: UILabel!
     @IBOutlet weak var sliderOutlet: UISlider!
+    
     @IBOutlet weak var startOutlet: UIButton!
     @IBOutlet weak var stopOutlet: UIButton!
+    
     @IBOutlet weak var pauseOutlet: UIButton!
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,11 +56,11 @@ class CountdownViewController: UIViewController {
     
     
     @IBAction func stopButton(_ sender: UIButton) {
-        stop()
-        timeScreen.text = seconds.toTimeScreen()
-
         stopOutlet.isEnabled = false
         seconds = 30
+        
+        stop()
+        timeScreen.text = seconds.toTimeScreen()
     }
     
     
@@ -75,6 +77,8 @@ class CountdownViewController: UIViewController {
     
     func stop() {
         timer.invalidate()
+        sliderOutlet.setValue(Float(seconds), animated: true)
+        
         sliderOutlet.isHidden = false
         pauseOutlet.isEnabled = false
         startOutlet.isEnabled = true

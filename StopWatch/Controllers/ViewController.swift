@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var startLabel: UIButton!
     @IBOutlet weak var pauseLabel: UIButton!
     @IBOutlet weak var resetLabel: UIButton!
-
+    
     
     //MARK: - Proporties
     var seconds = 0
@@ -31,6 +31,7 @@ class ViewController: UIViewController {
     //MARK: - Buttons
     @IBAction func startButton(_ sender: UIButton) {
         runTimer()
+        
         pauseLabel.isEnabled = true
         resetLabel.isEnabled = true
         startLabel.isEnabled = false
@@ -41,10 +42,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func resetButton(_ sender: UIButton) {
-        stop()
         resetLabel.isEnabled = false
-        
         seconds = 0
+        
+        stop()
         timeScreen.text = seconds.toTimeScreen()
     }
     
@@ -54,11 +55,13 @@ class ViewController: UIViewController {
     func initSetup() {
         pauseLabel.isEnabled = false
         resetLabel.isEnabled = false
+        
         timeScreen.text = seconds.toTimeScreen()
     }
     
     func stop() {
         timer.invalidate()
+        
         startLabel.isEnabled = true
         pauseLabel.isEnabled = false
     }

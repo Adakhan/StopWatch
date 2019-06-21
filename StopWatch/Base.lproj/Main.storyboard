@@ -25,7 +25,6 @@
                                     <constraint firstAttribute="height" constant="100" id="Yzt-4q-qdK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="65"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Vz-GJ-D7P">
@@ -60,7 +59,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.50545951648412024" green="0.50545951648412024" blue="0.50545951648412024" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.77979677920000001" green="0.36175966259999998" blue="0.36028385159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hTd-Jo-NX1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6EA-yT-36n"/>
                             <constraint firstItem="hTd-Jo-NX1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="Zel-R2-nLI"/>
@@ -115,7 +114,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="stopButton:" destination="kJE-eH-x1M" eventType="touchUpInside" id="W4k-5E-80U"/>
+                                    <action selector="stopButton:" destination="kJE-eH-x1M" eventType="touchUpInside" id="pPE-aX-teR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BaE-ZM-4yc">
@@ -123,14 +122,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="pause"/>
                                 <connections>
-                                    <action selector="pauseButton:" destination="kJE-eH-x1M" eventType="touchUpInside" id="QpO-mJ-orQ"/>
+                                    <action selector="pauseButton:" destination="kJE-eH-x1M" eventType="touchUpInside" id="PuT-iM-Rtu"/>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" minValue="0.0" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="odK-7n-nVZ">
                                 <rect key="frame" x="14" y="289" width="347" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="maximumTrackTintColor" red="0.85480856895446777" green="0.85495573282241821" blue="0.85479927062988281" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="thumbTintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <connections>
                                     <action selector="slider:" destination="kJE-eH-x1M" eventType="valueChanged" id="e6y-tg-6cK"/>
@@ -157,7 +156,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.51460053805772421" green="0.51460053805772421" blue="0.51460053805772421" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.77979677920000001" green="0.36175966259999998" blue="0.36028385159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Usf-bS-9na" firstAttribute="leading" secondItem="bje-g3-Lv3" secondAttribute="leading" id="DjR-qE-ihs"/>
                             <constraint firstItem="Usf-bS-9na" firstAttribute="trailing" secondItem="bje-g3-Lv3" secondAttribute="trailing" id="rE2-zB-dwI"/>
@@ -167,10 +166,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="countdown" id="6wA-e8-VGQ"/>
                     <connections>
-                        <outlet property="pauseOutlet" destination="BaE-ZM-4yc" id="0yf-SI-Qpp"/>
+                        <outlet property="pauseOutlet" destination="BaE-ZM-4yc" id="IzG-Ak-kRb"/>
                         <outlet property="sliderOutlet" destination="odK-7n-nVZ" id="v51-uP-Yra"/>
                         <outlet property="startOutlet" destination="Lq3-wc-hhH" id="g5i-bj-hVD"/>
-                        <outlet property="stopOutlet" destination="2Ld-Ow-poO" id="BJx-sL-vOh"/>
+                        <outlet property="stopOutlet" destination="2Ld-Ow-poO" id="KNo-cm-ceH"/>
                         <outlet property="timeScreen" destination="Usf-bS-9na" id="y8a-ji-Ew8"/>
                     </connections>
                 </viewController>
